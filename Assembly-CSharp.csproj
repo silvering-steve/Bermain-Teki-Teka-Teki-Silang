@@ -52,12 +52,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Addons\Teka Teki Silang\Script\ttsmanager.cs" />
+     <Compile Include="Assets\Scenes\Test\Game.cs" />
+     <Compile Include="Assets\Scenes\Test\Spawn.cs" />
+     <Compile Include="Assets\Scripts\TTS1\TTSButton1.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\GameData.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\BoardDataDrawer.cs" />
+     <Compile Include="Assets\Scenes\Test\Player.cs" />
+     <Compile Include="Assets\Scripts\TTS1\TTSKotak1.cs" />
+     <Compile Include="Assets\Scenes\Test\Tanah.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\WordsGrid.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\BoardData.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\AlphabetData.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\AlphabetDataDrawer.cs" />
      <Compile Include="Assets\Addons\Teka Teki Silang\Script\ButtonJawabanScript.cs" />
+     <Compile Include="Assets\Scripts\WordSearch\GridSquare.cs" />
+     <Compile Include="Assets\Scripts\TTS1\TTSManager1.cs" />
      <Compile Include="Assets\Addons\Teka Teki Silang\Script\KotakJawaban.cs" />
-     <Compile Include="Assets\Scripts\TTS\TTSManager.cs" />
-     <Compile Include="Assets\Scripts\TTS\TTSKotak.cs" />
-     <Compile Include="Assets\Scripts\TTS\TTSButton.cs" />
+     <Compile Include="Assets\Addons\Teka Teki Silang\Script\ttsmanager.cs" />
+     <Compile Include="Assets\Scripts\TTS2\TTSButton2.cs" />
+     <Compile Include="Assets\Scripts\TTS2\TTSKotak2.cs" />
+     <Compile Include="Assets\Scripts\TTS2\TTSManager2.cs" />
      <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
