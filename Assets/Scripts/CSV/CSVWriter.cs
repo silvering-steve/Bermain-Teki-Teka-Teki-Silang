@@ -29,12 +29,13 @@ public class CSVWriter : MonoBehaviour
     
     void Start()
     {
-        _fileName = Application.dataPath + "/dataSiswa.csv";
-        _isFile = File.Exists(Application.dataPath + "/dataSiswa.csv");
+        _fileName = Application.persistentDataPath + "/dataSiswa.csv";
+        _isFile = File.Exists(Application.persistentDataPath + "/dataSiswa.csv");
 
         if (_isFile)
         {
             Debug.Log("File Found");
+            Debug.Log(Application.persistentDataPath);
         }
         else
         {
