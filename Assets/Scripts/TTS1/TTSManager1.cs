@@ -16,29 +16,31 @@ public class TTSManager1 : MonoBehaviour
         public List<TTSKotak1> listKotakJawab;
     }
 
-    public class ListSoalTTS
-    {
-        public List<SoalTTS> listSoal;
-    }
+    [Header("Soal")] 
+    public List<SoalTTS> listSoal;
 
-    [Header("Soal")] public List<SoalTTS> listSoal;
-
-    [Space(order = 3)] public int indexSoal = 0;
+    [Space(order = 3)] 
+    public int indexSoal = 0;
+    public int indexJawaban = 0;
     public TextMeshProUGUI soalTxt;
     public TextMeshProUGUI soalNo;
 
-    [Header("Jawab")] public List<TTSKotak1> kotakAll;
+    [Header("Jawab")] 
+    public List<TTSKotak1> kotakAll;
     public List<TTSKotak1> kotakSebagian;
     public TTSKotak1 kotakSelected;
 
-    [Header("Button")] public GameObject btnJawab;
+    [Header("Button")] 
+    public GameObject btnJawab;
     public Transform parentJawab;
 
-    [Space(order = 3)] public List<GameObject> jawabList;
+    [Space(order = 3)] 
+    public List<GameObject> jawabList;
     public Image check;
     public Image solved;
 
-    [Header("Info")] public GameObject info;
+    [Header("Info")]
+    public GameObject info;
     public List<Sprite> imgList;
 
     public static System.Random rnd = new System.Random();
@@ -216,7 +218,6 @@ public class TTSManager1 : MonoBehaviour
         }
         else
         {
-
             indexSoal++;
         }
 
@@ -226,7 +227,8 @@ public class TTSManager1 : MonoBehaviour
         jawabList.Clear();
 
         GenerateSoal();
-
+        kotakSelected = null;
+        indexJawaban = 0;
     }
 
     public void BeforeSoal()
@@ -246,11 +248,29 @@ public class TTSManager1 : MonoBehaviour
         jawabList.Clear();
 
         GenerateSoal();
+        kotakSelected = null;
     }
 
     public void Hapus()
     {
-        kotakSelected.DeleteAnswer();
+        SoalTTS _soal = listSoal[indexSoal];
+        if (kotakSelected == null)
+        {
+            if (indexJawaban == 0)
+            {
+                kotakSelected = _soal.listKotakJawab[_soal.listKotakJawab.Count() - 1];
+                kotakSelected.DeleteAnswer();
+                indexJawaban = _soal.listKotakJawab.Count() - 1;
+                kotakSelected = null;
+            }
+            else
+            {
+                kotakSelected = _soal.listKotakJawab[indexJawaban - 1];
+                kotakSelected.DeleteAnswer();
+                indexJawaban -= 1;
+                kotakSelected = null;
+            }
+        }
     }
 
     public void ChangeImage()
@@ -287,7 +307,29 @@ public class TTSManager1 : MonoBehaviour
                 _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
                 _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    if (kotakSelected != null)
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        // foreach (var a in _soal.listKotakJawab)
+                        // {
+                        //     if (kotakSelected)
+                        //     {
+                        //         a.GetComponent<Image>().color = Color.green;
+                        //     }
+                        // }
+                        
+                        kotakSelected.SetJawab(b);
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
                     {
                         kotakSelected.SetJawab(b);
                     }
@@ -303,7 +345,29 @@ public class TTSManager1 : MonoBehaviour
                 _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
                 _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    if (kotakSelected != null)
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
                     {
                         kotakSelected.SetJawab(b);
                     }
@@ -319,7 +383,29 @@ public class TTSManager1 : MonoBehaviour
                 _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
                 _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    if (kotakSelected != null)
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
                     {
                         kotakSelected.SetJawab(b);
                     }
