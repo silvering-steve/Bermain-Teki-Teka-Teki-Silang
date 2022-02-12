@@ -141,15 +141,15 @@ public class TTSManager5 : MonoBehaviour
             }
             else if (i == 6)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     int shuffleNum = rnd.Next(0, (huruf.Count));
-                    enamDtemp.Add(huruf[shuffleNum]);
+                    tujuhDtemp.Add(huruf[shuffleNum]);
                 }
             }
         }
 
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             if (i == 0)
             {
