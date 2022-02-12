@@ -45,8 +45,7 @@ public class TTSManager1 : MonoBehaviour
     public List<Sprite> imgList;
 
     public static System.Random rnd = new System.Random();
-
-    private int testVar;
+    
     private List<string> satuD;
     private List<string> duaD;
     private List<string> tigaD;

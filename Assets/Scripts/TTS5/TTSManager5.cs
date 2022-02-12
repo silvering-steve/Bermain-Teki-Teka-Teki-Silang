@@ -78,14 +78,14 @@ public class TTSManager5 : MonoBehaviour
         empatD = new List<string> { };
         limaD = new List<string> { };
         enamD = new List<string> { };
-        tujuhD = new List<string>() { };
+        tujuhD = new List<string> { };
         satuDtemp = new List<string> {"P", "A", "S", "T"};
         duaDtemp = new List<string> {"L", "E", "M", "B", "U", "T"};
         tigaDtemp = new List<string> {"K", "E", "P", "A", "L", "C", "I"};
         empatDtemp = new List<string> {"B", "E", "N", "A", "G", "I"};
         limaDtemp = new List<string> {"G", "E", "L", "A", "S"};
         enamDtemp = new List<string> {"S", "I", "A", "T", "K"};
-        tujuhDtemp = new List<string>() {"F", "L", "O", "U", "R", "I", "D", "E"};
+        tujuhDtemp = new List<string> {"F", "L", "O", "U", "R", "I", "D", "E"};
 
         // Add random
 

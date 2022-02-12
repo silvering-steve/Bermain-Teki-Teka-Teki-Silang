@@ -14,10 +14,14 @@ ScriptsOnlyBuild:
     - TTSKotak2
     - TTSKotak3
     - TTSKotak4
+    - TTSKotak5
+    - TTSKotak7
     - TTSManager1
     - TTSManager2
     - TTSManager3
     - TTSManager4
+    - TTSManager5
+    - TTSManager7
     - WordChecker
     - WordsGrid
     Unity.2D.Animation.Editor.dll:
@@ -89,86 +93,96 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 1548}
     - Class: 114
-      Script: {instanceID: 1578}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 1664}
+      Script: {instanceID: 1586}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1672}
     - Class: 114
-      Script: {instanceID: 1758}
+      Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 1864}
+      Script: {instanceID: 1766}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 1872}
     - Class: 114
-      Script: {instanceID: 2276}
+      Script: {instanceID: 1952}
     - Class: 114
-      Script: {instanceID: 2280}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2412}
+      Script: {instanceID: 2286}
     - Class: 114
-      Script: {instanceID: 2706}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2422}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2718}
     - Class: 114
-      Script: {instanceID: 2934}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 2812}
+    - Class: 114
+      Script: {instanceID: 2898}
+    - Class: 114
+      Script: {instanceID: 2948}
     - Class: 114
       Script: {instanceID: 3134}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 3374}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3386}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3438}
     - Class: 114
-      Script: {instanceID: 3518}
+      Script: {instanceID: 3504}
     - Class: 114
-      Script: {instanceID: 3720}
+      Script: {instanceID: 3534}
     - Class: 114
-      Script: {instanceID: 3892}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 4008}
+      Script: {instanceID: 3908}
     - Class: 114
-      Script: {instanceID: 4010}
+      Script: {instanceID: 4024}
     - Class: 114
-      Script: {instanceID: 4444}
+      Script: {instanceID: 4026}
     - Class: 114
-      Script: {instanceID: 4862}
+      Script: {instanceID: 4460}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 4878}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 4884}
     - Class: 114
-      Script: {instanceID: 5156}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5242}
+      Script: {instanceID: 4964}
     - Class: 114
-      Script: {instanceID: 5296}
+      Script: {instanceID: 5176}
     - Class: 114
-      Script: {instanceID: 5342}
+      Script: {instanceID: 5262}
     - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 5316}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 5362}
     - Class: 114
-      Script: {instanceID: 5782}
+      Script: {instanceID: 5364}
     - Class: 114
-      Script: {instanceID: 21492}
+      Script: {instanceID: 5420}
     - Class: 114
-      Script: {instanceID: 121778}
+      Script: {instanceID: 5802}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -194,6 +208,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 836ca9a39668ad662b195fe61004c3b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSKotak5
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -274,6 +294,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 56063e2a62709eada5ad74256fdead87
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSManager7
+  - hash:
+      serializedVersion: 2
       Hash: 0e0f063ad82b34f050d267dc335bc32a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -334,10 +360,22 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
+      Hash: 1061e4c74b74cea942efb6575e09bdb3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 11866171c10b87de8701b68b6b7f7f81
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSKotak7
   - hash:
       serializedVersion: 2
       Hash: c1651c78463b0733d7819dc08f032643
@@ -346,7 +384,7 @@ ScriptsOnlyBuild:
     className: TTSKotak1
   - hash:
       serializedVersion: 2
-      Hash: 1814a19ae76e6ae682a2091abb1e2b3b
+      Hash: e128e61f12aff763089e79cdbd71897f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TTSManager3
@@ -386,6 +424,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 0e0f063ad82b34f050d267dc335bc32a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSButton7
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -640,7 +684,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 437d745272441b238ade68264e9c31cb
+      Hash: 976c69c6415c9141fb579db4310fe94b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TTSManager1
@@ -706,7 +750,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 163689680987c920be8ea6c3f3117066
+      Hash: 78d99a440efa06d1678b814e09b844e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TTSManager4
@@ -722,6 +766,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 28c0013d57bece9767e6a6ca28712323
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSManager5
+  - hash:
+      serializedVersion: 2
+      Hash: 0e0f063ad82b34f050d267dc335bc32a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSButton5
   - hash:
       serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
@@ -778,7 +834,7 @@ ScriptsOnlyBuild:
     className: CSVWriter
   - hash:
       serializedVersion: 2
-      Hash: f4479bc106891cdb8763ce2ba6186dba
+      Hash: 7a42e8fed49c95a7ee752dcba0004ec6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TTSManager2
@@ -848,12 +904,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ttsmanager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
