@@ -310,7 +310,7 @@ public class TTSManager1 : MonoBehaviour
                     if (kotakSelected == null)
                     {
                         kotakSelected = _soal.listKotakJawab[indexJawaban];
-                        kotakSelected.GetComponent<Image>().color = Color.red;
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
 
                         // foreach (var a in _soal.listKotakJawab)
                         // {
@@ -348,7 +348,7 @@ public class TTSManager1 : MonoBehaviour
                     if (kotakSelected == null)
                     {
                         kotakSelected = _soal.listKotakJawab[indexJawaban];
-                        kotakSelected.GetComponent<Image>().color = Color.red;
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
 
                         foreach (var a in _soal.listKotakJawab)
                         {
@@ -386,7 +386,7 @@ public class TTSManager1 : MonoBehaviour
                     if (kotakSelected == null)
                     {
                         kotakSelected = _soal.listKotakJawab[indexJawaban];
-                        kotakSelected.GetComponent<Image>().color = Color.red;
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
 
                         foreach (var a in _soal.listKotakJawab)
                         {

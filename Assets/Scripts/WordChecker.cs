@@ -28,6 +28,7 @@ public class WordChecker : MonoBehaviour
     private void OnDisable() {
          GameEvents.OnCheckSquare -= SquareSelected;
          GameEvents.OnClearSelection -= ClearSelection;
+         SearchingWord.totalWordsCorrect = 0;
     }
 
     void Start()
