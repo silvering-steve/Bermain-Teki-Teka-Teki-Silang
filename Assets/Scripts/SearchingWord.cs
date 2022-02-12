@@ -8,6 +8,8 @@ public class SearchingWord : MonoBehaviour
     public Text displayedText;
     public Image crossLine;
 
+    public static int totalWordsCorrect;
+
     private string _word;
 
     void Start()
@@ -32,6 +34,7 @@ public class SearchingWord : MonoBehaviour
     private void CorrectWord(string word, List<int> squareIndexes) {
         if(word == _word) {
             crossLine.gameObject.SetActive(true);
+            totalWordsCorrect++;
         }
     }
 }

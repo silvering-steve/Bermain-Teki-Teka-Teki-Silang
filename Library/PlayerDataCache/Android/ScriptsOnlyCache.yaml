@@ -6,10 +6,17 @@ ScriptsOnlyBuild:
     - ButtonJawabanScript
     - CSVWriter
     - GameData
+    - GridSquare
+    - SearchingWord
+    - SearchingWordsList
     - TTSKotak1
     - TTSKotak2
+    - TTSKotak3
     - TTSManager1
     - TTSManager2
+    - TTSManager3
+    - WordChecker
+    - WordsGrid
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -57,6 +64,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/Main.unity:
@@ -74,6 +82,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -82,6 +92,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1550}
     - Class: 114
       Script: {instanceID: 1578}
+    - Class: 114
+      Script: {instanceID: 1664}
     - Class: 114
       Script: {instanceID: 1690}
     - Class: 114
@@ -92,6 +104,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2268}
     - Class: 114
       Script: {instanceID: 2276}
+    - Class: 114
+      Script: {instanceID: 2280}
+    - Class: 114
+      Script: {instanceID: 2412}
     - Class: 114
       Script: {instanceID: 2706}
     - Class: 114
@@ -123,15 +139,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4882}
     - Class: 114
+      Script: {instanceID: 5148}
+    - Class: 114
+      Script: {instanceID: 5234}
+    - Class: 114
       Script: {instanceID: 5288}
     - Class: 114
       Script: {instanceID: 5332}
     - Class: 114
+      Script: {instanceID: 5388}
+    - Class: 114
       Script: {instanceID: 5452}
     - Class: 114
-      Script: {instanceID: 5744}
-    - Class: 114
       Script: {instanceID: 5770}
+    - Class: 114
+      Script: {instanceID: 117792}
+    - Class: 114
+      Script: {instanceID: 117796}
+    - Class: 114
+      Script: {instanceID: 143350}
+    - Class: 114
+      Script: {instanceID: 143354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -139,6 +167,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -277,7 +307,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 7220f5306141f562c24870431a5e5557
+      Hash: 5229a2421c5eed1624f4cddc0c86cd21
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WordChecker
@@ -299,12 +329,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
-  - hash:
-      serializedVersion: 2
-      Hash: 0e0f063ad82b34f050d267dc335bc32a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TTSButton2
   - hash:
       serializedVersion: 2
       Hash: c1651c78463b0733d7819dc08f032643
@@ -721,12 +745,6 @@ ScriptsOnlyBuild:
     className: GridSquare
   - hash:
       serializedVersion: 2
-      Hash: 9885b8380a4f5a7767b90ad985534174
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TTSKotak2
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -743,12 +761,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationPlayableAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 7b14ea11b1d4ab33acc04800d7cfc618
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TTSManager2
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -773,7 +785,43 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ttsmanager
+  - hash:
+      serializedVersion: 2
+      Hash: 0e0f063ad82b34f050d267dc335bc32a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSButton2
+  - hash:
+      serializedVersion: 2
+      Hash: 9885b8380a4f5a7767b90ad985534174
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSKotak2
+  - hash:
+      serializedVersion: 2
+      Hash: f4479bc106891cdb8763ce2ba6186dba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSManager2
+  - hash:
+      serializedVersion: 2
+      Hash: 0e0f063ad82b34f050d267dc335bc32a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSButton3
+  - hash:
+      serializedVersion: 2
+      Hash: 18013028f6c0a44c2d514fc77b45aba4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSKotak3
+  - hash:
+      serializedVersion: 2
+      Hash: 1814a19ae76e6ae682a2091abb1e2b3b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TTSManager3
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: D:/WORK/UDINUS/Unity/Application/TTS_GIGI.apk
+  playerPath: D:/WORK/UDINUS/Unity/Application/TTS_GIGI_v2.apk

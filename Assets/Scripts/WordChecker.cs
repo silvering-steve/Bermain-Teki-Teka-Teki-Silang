@@ -6,6 +6,8 @@ using System;
 public class WordChecker : MonoBehaviour
 {
     public GameData currentGameData;
+    public GameObject info;
+    public int totalAnswer;
     private string _word;
 
     private int _assignedPoints = 0;
@@ -46,6 +48,12 @@ public class WordChecker : MonoBehaviour
             Debug.DrawRay(_rayDiagonalLeftDown.origin, _rayDiagonalLeftDown.direction * 4);
             Debug.DrawRay(_rayDiagonalRightUp.origin, _rayDiagonalRightUp.direction * 4);
             Debug.DrawRay(_rayDiagonalRightDown.origin, _rayDiagonalRightDown.direction * 4);
+        }
+
+        if (totalAnswer == SearchingWord.totalWordsCorrect)
+        {
+            info.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 
