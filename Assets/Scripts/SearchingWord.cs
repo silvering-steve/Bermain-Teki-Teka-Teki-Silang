@@ -35,6 +35,7 @@ public class SearchingWord : MonoBehaviour
         if(word == _word) {
             crossLine.gameObject.SetActive(true);
             totalWordsCorrect++;
+            GameManager.PlaySound1();
         }
     }
 }

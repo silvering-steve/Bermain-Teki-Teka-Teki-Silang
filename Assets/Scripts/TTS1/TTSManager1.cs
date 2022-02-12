@@ -11,6 +11,7 @@ public class TTSManager1 : MonoBehaviour
     [System.Serializable]
     public class SoalTTS
     {
+        public bool playAudio;
         public string soal;
         public string noSoal;
         public List<TTSKotak1> listKotakJawab;
@@ -45,6 +46,7 @@ public class TTSManager1 : MonoBehaviour
 
     public static System.Random rnd = new System.Random();
 
+    private int testVar;
     private List<string> satuD;
     private List<string> duaD;
     private List<string> tigaD;
@@ -185,6 +187,12 @@ public class TTSManager1 : MonoBehaviour
         if (benar)
         {
             check.GetComponentInChildren<Button>().interactable = true;
+
+            if (!listSoal[indexSoal].playAudio)
+            {
+                GameManager.PlaySound1();
+                listSoal[indexSoal].playAudio = true;
+            }
         }
         else
         {
@@ -321,6 +329,7 @@ public class TTSManager1 : MonoBehaviour
                         // }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -328,12 +337,14 @@ public class TTSManager1 : MonoBehaviour
                         {
                             indexJawaban = 0;
                         }
+                        
                     } 
                     else if (kotakSelected != null)
                     {
                         kotakSelected.SetJawab(b);
                     }
                 });
+
                 jawabList.Add(_btnJawaban);
             }
         }
@@ -359,6 +370,7 @@ public class TTSManager1 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -397,6 +409,7 @@ public class TTSManager1 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 

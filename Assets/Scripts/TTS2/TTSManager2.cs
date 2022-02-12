@@ -11,6 +11,7 @@ public class TTSManager2 : MonoBehaviour
     [System.Serializable]
     public class SoalTTS
     {
+        public bool playAudio;
         public string soal;
         public string noSoal;
         public List<TTSKotak2> listKotakJawab;
@@ -249,6 +250,12 @@ public class TTSManager2 : MonoBehaviour
         if (benar)
         {
             check.GetComponentInChildren<Button>().interactable = true;
+            
+            if (!listSoal[indexSoal].playAudio)
+            {
+                GameManager.PlaySound1();
+                listSoal[indexSoal].playAudio = true;
+            }
         }
         else
         {
@@ -385,6 +392,7 @@ public class TTSManager2 : MonoBehaviour
                         // }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -423,6 +431,7 @@ public class TTSManager2 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -461,6 +470,7 @@ public class TTSManager2 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -499,6 +509,7 @@ public class TTSManager2 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -537,6 +548,7 @@ public class TTSManager2 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 
@@ -575,6 +587,7 @@ public class TTSManager2 : MonoBehaviour
                         }
                         
                         kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
                         indexJawaban++;
                         kotakSelected = null;
 

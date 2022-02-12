@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\TTS1\TTSButton1.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\AlphabetData.cs" />
      <Compile Include="Assets\Scripts\WordChecker.cs" />
+     <Compile Include="Assets\Scripts\CSV\GameManager.cs" />
      <Compile Include="Assets\Scripts\TTS1\TTSKotak1.cs" />
      <Compile Include="Assets\Scripts\TTS3\TTSManager3.cs" />
      <Compile Include="Assets\Scripts\TTS2\TTSKotak2.cs" />
@@ -78,7 +79,9 @@
      <Compile Include="Assets\Scripts\TTS2\TTSButton2.cs" />
      <Compile Include="Assets\Scripts\TTS3\TTSButton3.cs" />
      <Compile Include="Assets\Addons\Teka Teki Silang\Script\ttsmanager.cs" />
-     <Compile Include="Assets\Scripts\CSV\GameManager.cs" />
+     <Compile Include="Assets\Scripts\TTS5\TTSButton5.cs" />
+     <Compile Include="Assets\Scripts\TTS5\TTSKotak5.cs" />
+     <Compile Include="Assets\Scripts\TTS5\TTSManager5.cs" />
      <None Include="Assets\Addons\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Addons\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

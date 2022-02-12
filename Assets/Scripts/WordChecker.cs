@@ -54,7 +54,6 @@ public class WordChecker : MonoBehaviour
         if (totalAnswer == SearchingWord.totalWordsCorrect)
         {
             info.SetActive(true);
-            gameObject.SetActive(false);
         }
     }
 
