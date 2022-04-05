@@ -510,5 +510,200 @@ public class TTSManager5 : MonoBehaviour
                 jawabList.Add(_btnJawaban);
             }
         }
+        else if (indexSoal == 7)
+        {
+            foreach (var b in huruf)
+            {
+                GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
+                _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
+                _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
+                    {
+                        kotakSelected.SetJawab(b);
+                    }
+                });
+                jawabList.Add(_btnJawaban);
+            }
+        }
+        else if (indexSoal == 8)
+        {
+            foreach (var b in huruf)
+            {
+                GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
+                _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
+                _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
+                    {
+                        kotakSelected.SetJawab(b);
+                    }
+                });
+                jawabList.Add(_btnJawaban);
+            }
+        }
+        else if (indexSoal == 9)
+        {
+            foreach (var b in huruf)
+            {
+                GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
+                _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
+                _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
+                    {
+                        kotakSelected.SetJawab(b);
+                    }
+                });
+                jawabList.Add(_btnJawaban);
+            }
+        }
+        else if (indexSoal == 10)
+        {
+            foreach (var b in huruf)
+            {
+                GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
+                _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
+                _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
+                    {
+                        kotakSelected.SetJawab(b);
+                    }
+                });
+                jawabList.Add(_btnJawaban);
+            }
+        }
+        else if (indexSoal == 11)
+        {
+            foreach (var b in huruf)
+            {
+                GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
+                _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
+                _btnJawaban.GetComponent<Button>().onClick.AddListener(() =>
+                {
+                    if (kotakSelected == null)
+                    {
+                        kotakSelected = _soal.listKotakJawab[indexJawaban];
+                        // kotakSelected.GetComponent<Image>().color = Color.red;
+
+                        foreach (var a in _soal.listKotakJawab)
+                        {
+                            if (!kotakSelected)
+                            {
+                                a.GetComponent<Image>().color = Color.white;
+                            }
+                        }
+                        
+                        kotakSelected.SetJawab(b);
+                        GameManager.PlaySound3();
+                        indexJawaban++;
+                        kotakSelected = null;
+
+                        if (indexJawaban == _soal.listKotakJawab.Count())
+                        {
+                            indexJawaban = 0;
+                        }
+                    } 
+                    else if (kotakSelected != null)
+                    {
+                        kotakSelected.SetJawab(b);
+                    }
+                });
+                jawabList.Add(_btnJawaban);
+            }
+        }
     }
 }
