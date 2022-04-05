@@ -10,12 +10,14 @@ public class CSVWriter : MonoBehaviour
     private bool _isFile;
     
     public TMP_InputField nama;
+    public TMP_InputField kelas;
     public TMP_InputField sekolah;
 
     [System.Serializable]
     public class Murid
     {
         public string name;
+        public string kelas;
         public string sekolah;
     }
 
@@ -40,7 +42,7 @@ public class CSVWriter : MonoBehaviour
         else
         {
             TextWriter tw = new StreamWriter(_fileName, false);
-            tw.WriteLine("Nama, Sekolah");
+            tw.WriteLine("Nama, Kelas, Sekolah");
             tw.Close();
 
             Debug.Log("File Created");
@@ -50,10 +52,11 @@ public class CSVWriter : MonoBehaviour
     public void WriteCSV()
     {
         string namanya = nama.text;
+        string kelasnya = kelas.text;
         string sekolahnya = sekolah.text;
         
         TextWriter tw = new StreamWriter(_fileName, true);
-        tw.WriteLine(namanya + "," + sekolahnya);
+        tw.WriteLine(namanya + "," + kelasnya + "," + sekolahnya);
         tw.Close();
     }
 }

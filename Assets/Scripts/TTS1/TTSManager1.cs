@@ -52,86 +52,15 @@ public class TTSManager1 : MonoBehaviour
     private List<string> satuDtemp;
     private List<string> duaDtemp;
     private List<string> tigaDtemp;
-
-    private void Awake()
-    {
-        List<string> huruf = new List<string>
-        {
-            "A", "B", "C", "D", "E",
-            "F", "G", "H", "I", "J",
-            "K", "L", "M", "N", "O",
-            "P", "Q", "R", "S", "T",
-            "U", "V", "W", "X", "Y", "Z"
-        };
-
-        satuD = new List<string> { };
-        duaD = new List<string> { };
-        tigaD = new List<string> { };
-        satuDtemp = new List<string> {"R", "S", "E", "I"};
-        duaDtemp = new List<string> {"T", "A", "R", "I", "N", "G"};
-        tigaDtemp = new List<string> {"G", "E", "R", "A", "H", "M"};
-
-        // Add random
-
-        for (int i = 0; i < 3; i++)
-        {
-            if (i == 0)
+    
+    List<string> huruf = new List<string>
             {
-                for (int j = 0; j < 8; j++)
-                {
-                    int shuffleNum = rnd.Next(0, (huruf.Count));
-                    satuDtemp.Add(huruf[shuffleNum]);
-                }
-            }
-            else if (i == 1)
-            {
-                for (int j = 0; j < 6; j++)
-                {
-                    int shuffleNum = rnd.Next(0, (huruf.Count));
-                    duaDtemp.Add(huruf[shuffleNum]);
-                }
-            }
-            else if (i == 2)
-            {
-                for (int j = 0; j < 6; j++)
-                {
-                    int shuffleNum = rnd.Next(0, (huruf.Count));
-                    tigaDtemp.Add(huruf[shuffleNum]);
-                }
-            }
-        }
-
-        for (int i = 0; i < 7; i++)
-        {
-            if (i == 0)
-            {
-                for (int j = 0; j < 12; j++)
-                {
-                    int shuffleNum = rnd.Next(0, (satuDtemp.Count));
-                    satuD.Add(satuDtemp[shuffleNum]);
-                    satuDtemp.Remove(satuDtemp[shuffleNum]);
-                }
-            }
-            else if (i == 1)
-            {
-                for (int j = 0; j < 12; j++)
-                {
-                    int shuffleNum = rnd.Next(0, (duaDtemp.Count));
-                    duaD.Add(duaDtemp[shuffleNum]);
-                    duaDtemp.Remove(duaDtemp[shuffleNum]);
-                }
-            }
-            else if (i == 2)
-            {
-                for (int j = 0; j < 12; j++)
-                {
-                    int shuffleNum = rnd.Next(0, (tigaDtemp.Count));
-                    tigaD.Add(tigaDtemp[shuffleNum]);
-                    tigaDtemp.Remove(tigaDtemp[shuffleNum]);
-                }
-            }
-        }
-    }
+                "Q", "W", "E", "R", "T",
+                "Y", "U", "I", "O", "P",
+                "A", "S", "D", "F", "G",
+                "H", "J", "K", "L", "Z",
+                "X", "C", "V", "B", "N", "M"
+            };
 
     private void Update()
     {
@@ -185,17 +114,11 @@ public class TTSManager1 : MonoBehaviour
 
         if (benar)
         {
-            check.GetComponentInChildren<Button>().interactable = true;
-
             if (!listSoal[indexSoal].playAudio)
             {
                 GameManager.PlaySound1();
                 listSoal[indexSoal].playAudio = true;
             }
-        }
-        else
-        {
-            check.GetComponentInChildren<Button>().interactable = false;
         }
     }
 
@@ -308,7 +231,7 @@ public class TTSManager1 : MonoBehaviour
 
         if (indexSoal == 0)
         {
-            foreach (var b in satuD)
+            foreach (var b in huruf)
             {
                 GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
                 _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
@@ -317,16 +240,7 @@ public class TTSManager1 : MonoBehaviour
                     if (kotakSelected == null)
                     {
                         kotakSelected = _soal.listKotakJawab[indexJawaban];
-                        // kotakSelected.GetComponent<Image>().color = Color.red;
 
-                        // foreach (var a in _soal.listKotakJawab)
-                        // {
-                        //     if (kotakSelected)
-                        //     {
-                        //         a.GetComponent<Image>().color = Color.green;
-                        //     }
-                        // }
-                        
                         kotakSelected.SetJawab(b);
                         GameManager.PlaySound3();
                         indexJawaban++;
@@ -349,7 +263,7 @@ public class TTSManager1 : MonoBehaviour
         }
         else if (indexSoal == 1)
         {
-            foreach (var b in duaD)
+            foreach (var b in huruf)
             {
                 GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
                 _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
@@ -358,7 +272,6 @@ public class TTSManager1 : MonoBehaviour
                     if (kotakSelected == null)
                     {
                         kotakSelected = _soal.listKotakJawab[indexJawaban];
-                        // kotakSelected.GetComponent<Image>().color = Color.red;
 
                         foreach (var a in _soal.listKotakJawab)
                         {
@@ -388,7 +301,7 @@ public class TTSManager1 : MonoBehaviour
         }
         else if (indexSoal == 2)
         {
-            foreach (var b in tigaD)
+            foreach (var b in huruf)
             {
                 GameObject _btnJawaban = Instantiate(btnJawab, parentJawab);
                 _btnJawaban.GetComponent<ButtonJawabanScript>().SetData(b);
